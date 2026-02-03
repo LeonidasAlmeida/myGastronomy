@@ -1,2 +1,24 @@
 const express = require('express');
-const morgan = require('morgan')
+const morgan = require('morgan');
+const cors = require('cors');
+const dotenv = require('dotenv');
+const colors = require('colors');
+const connectDB = require('../backend/src/config/db');
+//connect app
+const app = express();
+//configuring dotenv
+dotenv.config();
+//connect to database
+connectDB();
+//PORT
+const PORT = process.env.PORT || 5000;
+//Middleware
+app.use(express.json());
+app.use(morgan("dev"));
+app.use(cors());
+//Router connections
+app.use("/test",require('./src/routers/testRouter'));
+//listem port to connection
+app.listen(PORT,()=>{
+    console.log(`http://localhost:${PORT}`.white.bgGreen);
+})
