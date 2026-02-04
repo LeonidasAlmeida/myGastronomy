@@ -18,6 +18,7 @@ app.use(morgan("dev"));
 app.use(cors());
 //Router connections
 app.use("/test",require('./src/routers/testRouter'));
+app.use("/users",require('./src/routers/users/users_router'));
 //listem port to connection
 app.listen(PORT,()=>{
     console.log(`http://localhost:${PORT}`.white.bgGreen);
