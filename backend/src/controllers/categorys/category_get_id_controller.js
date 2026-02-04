@@ -1,5 +1,5 @@
-const restaurantModel = require('../../models/restaurantModel');
-const restaurant_get_id_controller = async (req,res) =>{
+const categoryModel = require('../../models/categoryModel');
+const category_get_id_controller = async (req,res) =>{
     try {
          const {id} = req.params
          if(!id){
@@ -8,7 +8,7 @@ const restaurant_get_id_controller = async (req,res) =>{
                 message:"EMPTY ID"
             })
          }
-         const getRestaurant = await restaurantModel.findById(id)
+         const getRestaurant = await categoryModel.findById(id)
          res.status(200).send({
                 success:true,
                 message:"Successfully to get restaurante!",
@@ -22,4 +22,4 @@ const restaurant_get_id_controller = async (req,res) =>{
         })
     }
 }
-module.exports = restaurant_get_id_controller
+module.exports = category_get_id_controller
