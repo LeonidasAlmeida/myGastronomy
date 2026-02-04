@@ -17,7 +17,13 @@ const restaurant_update_controller = async (req,res) =>{
             })
          }
 
-       
+           const matchTitle = await restaurantModel.findOne({title:title})
+                    if(matchTitle){
+                   return res.status(500).send({
+                       success:false,
+                       message:"Title already exist"
+                   })}
+
      
          if(title) matchId.title = title;
          if(address) matchId.address = address;

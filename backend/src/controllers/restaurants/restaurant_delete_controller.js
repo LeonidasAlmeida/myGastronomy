@@ -8,7 +8,7 @@ const restaurant_delete_controller = async (req,res) =>{
                 message:"EMPTY ID"
             })
          }
-         await restaurant.findByIdAndDelete(id)
+         await restaurantModel.findByIdAndDelete(id)
          res.status(200).send({
                 success:true,
                 message:"Successfully to delete restaurante!",

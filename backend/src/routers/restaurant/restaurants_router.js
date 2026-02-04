@@ -14,6 +14,6 @@ router.put('/update_restaurants/:id',restaurant_update_controller);
 //GET | GET USERS
 router.get('/get_restaurants',restaurant_geter_controller)
 //POST | GET USER BY ID
-router.post('/get_id_restaurants /:id',restaurant_get_id_controller);
+router.post('/get_id_restaurants/:id',restaurant_get_id_controller);
 
 module.exports = router;
