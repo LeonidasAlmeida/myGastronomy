@@ -1,5 +1,5 @@
-const usersModel = require('../../models/usersModel');
-const user_get_id_controller = async (req,res) =>{
+const orderModel = require('../../models/orderModel');
+const order_get_id_controller = async (req,res) =>{
     try {
          const {id} = req.params
          if(!id){
@@ -8,10 +8,10 @@ const user_get_id_controller = async (req,res) =>{
                 message:"EMPTY ID"
             })
          }
-         const getOrder = await usersModel.findById(id)
+         const getOrder = await orderModel.findById(id)
          res.status(200).send({
                 success:true,
-                message:"Successfully to get user!",
+                message:"Successfully to get order!",
                 data:getOrder
             })
     } catch (error) {
@@ -22,4 +22,4 @@ const user_get_id_controller = async (req,res) =>{
         })
     }
 }
-module.exports = user_get_id_controller
+module.exports = order_get_id_controller
