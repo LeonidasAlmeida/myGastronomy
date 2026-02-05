@@ -1,0 +1,18 @@
+const orderModel = require('../../models/orderModel');
+const order_geter_controller = async (req,res)=>{
+    try {
+        const getItems = await orderModel.find({})
+        res.status(200).send({
+            success:true,
+            message:'sucessfully',
+            data:getItems
+        })
+    } catch (error) {
+        console.log(error)
+        res.status(500).send({
+            success:false,
+            message:"INTERNAL_ERROR"
+        })
+    }
+}
+module.exports = order_geter_controller;

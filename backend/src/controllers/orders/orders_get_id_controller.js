@@ -8,11 +8,11 @@ const user_get_id_controller = async (req,res) =>{
                 message:"EMPTY ID"
             })
          }
-         const getUser = await usersModel.findById(id)
+         const getOrder = await usersModel.findById(id)
          res.status(200).send({
                 success:true,
                 message:"Successfully to get user!",
-                data:getUser
+                data:getOrder
             })
     } catch (error) {
         console.log(error)
