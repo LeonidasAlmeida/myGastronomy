@@ -10,10 +10,10 @@ const router = express.Router();
 router.post('/create_order', order_create_controller);
 //GET | GET ITEMS
 router.get('/get_order',order_geter_controller);
-//GET | GET ITEM BY ID
+//GET | GET order BY ID
 router.post('/get_id_order/:id',order_get_id_controller);
-//PUT | UPDATE ITEM
+//PUT | UPDATE order
 router.put('/update_order/:id',order_update_controller);
-//DELETE | DELETE ITEM
+//DELETE | DELETE order
 router.delete('/delete_order/:id',order_delete_controller);
 module.exports = router;
