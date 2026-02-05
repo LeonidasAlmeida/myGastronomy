@@ -5,4 +5,4 @@ const errorMiddleware = (error,req,res,next)=>{
         message:'INTERNAL_ERROR_API'
     })
 }
-module.exports = errorMiddleware
+module.exports = errorMiddleware;

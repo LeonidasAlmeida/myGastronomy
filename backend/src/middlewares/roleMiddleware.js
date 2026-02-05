@@ -13,4 +13,4 @@ const roleMiddleware = async (req,res,next)=>{
     }
 }
 
-module.exports = {roleMiddleware}
+module.exports = roleMiddleware
