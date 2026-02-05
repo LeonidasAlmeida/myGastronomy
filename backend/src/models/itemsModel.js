@@ -5,6 +5,10 @@ const itemSchema = new mongoose.Schema({
         required:[true,"name is required"]
     },
     price:{
+        type:String,
+         required:[true,"price is required"]
+    },
+    description:{
         type:String
     },
     image:{

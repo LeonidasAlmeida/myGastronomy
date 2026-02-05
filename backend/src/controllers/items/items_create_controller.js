@@ -1,35 +1,31 @@
-const usersModel = require('../../models/usersModel');
-const loginValidations = require('../../validations/loginValidations');
-const bcrypt = require('bcryptjs')
-const user_create_controller = async (req,res)=>{
+
+const itemsModel = require('../../models/itemsModel');
+const itemValidations = require('../../validations/itemsValidations');
+const item_create_controller = async (req,res)=>{
     try {
-        const {error,value} = loginValidations.validate(req.body);
+        const {error,value} = itemValidations.validate(req.body);
         if(error){
             return res.status(400).send({
                 success:false,
                 message:"NOT_FOUND"
             })}
-            const matchEmail = await usersModel.findOne({email:value.email})
-             if(matchEmail){
+            const matchName = await itemsModel.findOne({name:value.name})
+             if(matchName){
             return res.status(500).send({
                 success:false,
-                message:"Email already exist"
+                message:"Name already exist"
             })}
-            //criptografia
-            const salt = bcrypt.genSaltSync(10)
-            //has of password
-            const hasdPassword = await bcrypt.hash(value.password,salt)
-            //save into database
-            await usersModel.create({
+           
+            await itemsModel.create({
                 name:value.name,
-                email:value.email,
-                password:hasdPassword,
-                address:value.address,
-                role:value.role
+                price:value.price,
+                description:value.description,
+                image:value.image, 
+                category:value.category
             });
            res.status(200).send({
                 success:true,
-                message:"Successfully to create user!",
+                message:"Successfully to create items!",
             })
     } catch (error) {
         console.log(error)
@@ -39,4 +35,4 @@ const user_create_controller = async (req,res)=>{
         })
     }
 }
-module.exports = user_create_controller
+module.exports = item_create_controller

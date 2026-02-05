@@ -21,6 +21,7 @@ app.use("/test",require('./src/routers/testRouter'));
 app.use("/users",require('./src/routers/users/users_router'));
 app.use("/restaurants",require('./src/routers/restaurant/restaurants_router'));
 app.use("/category",require('./src/routers/category/categoryRouter'));
+app.use("/item",require('./src/routers/item/itemRouter'));
 //listem port to connection
 app.listen(PORT,()=>{
     console.log(`http://localhost:${PORT}`.white.bgGreen);
