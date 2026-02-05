@@ -19,7 +19,13 @@ const user_update_controller = async (req,res) =>{
                 message:"NOT_FOUND"
             })
          }
-
+           const matchName = await userstModel.findOne({name:name})
+                             if(matchName){
+                            return res.status(500).send({
+                                success:false,
+                                message:"name already exist"
+                            })}
+         
          //salt password
          const salt = bcrypt.genSaltSync(10);
          //hasPassword
