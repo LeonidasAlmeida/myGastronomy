@@ -1,0 +1,30 @@
+.navbar{
+  display: flex;
+  flex-direction: column;  
+  height:9em;
+  justify-content:space-between;
+  align-items: center;
+  border: 1px solid black;
+  gap:0.4em;
+}
+.car{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   border:1px solid black;
+   width: 100%;
+   height:50px;
+}
+.navegate {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    height: 80px;
+}
+.listaNav{
+    list-style: none;
+}
