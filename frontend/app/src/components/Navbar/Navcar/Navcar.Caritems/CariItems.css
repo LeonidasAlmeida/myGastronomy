@@ -1,0 +1,63 @@
+.caritemsContainer{
+    height:100%;
+    display: grid;
+    grid-template-columns:repeat(6,1fr);
+    grid-template-rows:auto;
+    grid-template-areas:
+    "iconCar numberItems numberItems  valueCount valueCount iconDown";
+    grid-gap: 0.05em;
+
+    background-color: rgb(46, 141, 46);
+    border-radius: 0 0 0.7em 0.7em;
+    overflow: hidden;
+   
+}
+.centro{
+    display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        
+        font-weight: 600;
+        font-size: 15px;
+
+        color: white;
+}
+.iconCar{
+    
+    grid-area: iconCar;
+    border-right: 0.01em solid rgba(245, 245, 245, 0.308);
+    
+}
+.numberItems{
+    grid-area:numberItems;
+    border-right: 0.01em solid rgba(245, 245, 245, 0.308);
+   
+}
+.valueCount{
+    grid-area:valueCount;
+    border-right: 0.01em solid rgba(245, 245, 245, 0.308);
+   
+}
+.iconDown {
+    grid-area: iconDown;
+    border-right: 0.01em solid rgba(245, 245, 245, 0.308);
+  
+}
+.iconD{
+    font-size: 24px;
+}
+
+@media (max-width: 900px) {
+
+    /* estilos para telas até 768px */
+.caritemsContainer {
+      
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+            "iconCar numberItems numberItems"
+            "valueCount valueCount iconDown";
+        grid-gap: 0.05em;
+
+    }
+}

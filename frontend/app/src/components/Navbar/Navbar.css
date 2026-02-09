@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbarContent{
+    min-height:9em;
+    display: grid;
+    grid-template-columns:1fr;
+    grid-template-rows: auto;
+    gap: 0.2em;
+    grid-template-areas:
+    "car"
+    "navegate"
+    "navegate";
+    
+
+   
+}
+.car{
+    grid-area: car;
+    background-color: rgb(221, 239, 247);
+    border-radius: 0 0 0.7em 0.7em;
+    overflow: hidden;
+    border: 1px solid blanchedalmond;
+  
+}
+.navegate{
+    grid-area: navegate;
+    background-color: brown;
+}

@@ -1,0 +1,4 @@
+.changeLocationContainer{
+    display: flex;
+    flex-direction: row;
+}

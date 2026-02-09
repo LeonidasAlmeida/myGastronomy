@@ -1,0 +1,28 @@
+.navcarConteiner{
+    min-height:100%;
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr 1fr ;
+    grid-template-rows:auto;
+    grid-template-areas:
+    "getPromo getPromo changeLocation itemsCar";
+    grid-gap:2em;
+    /*background-color: aquamarine;*/
+}
+.getPromo{
+    grid-area: getPromo;
+    background-color: darkred;
+}
+.changeLocation{
+    grid-area: changeLocation;
+    background-color: darkred;
+}
+.itemsCar{
+    grid-area: itemsCar;
+    /*background-color: darkred;*/
+}
+
+@media (max-width:600px){
+.navcarConteiner {
+    grid-gap: 0.05em;
+  }
+}
