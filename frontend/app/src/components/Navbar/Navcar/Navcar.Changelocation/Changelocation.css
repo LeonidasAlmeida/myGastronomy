@@ -1,4 +1,17 @@
 .changeLocationContainer{
+    height: 100%;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+}
+.locationText{
+    font-size: 12px;
+    padding: 0.5em;
+}
+.iconLocation{
+    margin-top: 5px;
+    font-size: 17px;
 }

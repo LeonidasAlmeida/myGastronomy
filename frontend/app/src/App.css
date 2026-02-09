@@ -7,7 +7,7 @@
 
 .app{
     min-height:100vh;
-    background-color: aquamarine;
+    background-color: rgb(255, 255, 255);
 
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -17,6 +17,9 @@
     "main main"
     "footer footer";
     grid-gap:0.2rem;
+
+        padding-left: 3em;
+        padding-right: 3em;
 }
 
 nav{

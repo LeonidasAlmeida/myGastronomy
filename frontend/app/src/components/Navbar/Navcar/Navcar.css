@@ -5,16 +5,16 @@
     grid-template-rows:auto;
     grid-template-areas:
     "getPromo getPromo changeLocation itemsCar";
-    grid-gap:2em;
+    grid-gap:1em;
     /*background-color: aquamarine;*/
 }
 .getPromo{
     grid-area: getPromo;
-    background-color: darkred;
+    
 }
 .changeLocation{
     grid-area: changeLocation;
-    background-color: darkred;
+    
 }
 .itemsCar{
     grid-area: itemsCar;

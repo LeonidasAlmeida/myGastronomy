@@ -10,21 +10,26 @@
     gap: 0.2em;
     grid-template-areas:
     "car"
-    "navegate"
-    "navegate";
+    "logo navegate"
+    "logo navegate"
+    "logo navegate";
     
 
    
 }
 .car{
     grid-area: car;
-    background-color: rgb(221, 239, 247);
+    background-color: rgb(237, 250, 255);
     border-radius: 0 0 0.7em 0.7em;
     overflow: hidden;
     border: 1px solid blanchedalmond;
-  
+    
 }
 .navegate{
     grid-area: navegate;
     background-color: brown;
+}
+.logoPage {
+    grid-area: logo;
+    background-color: rgb(10, 79, 184);
 }
