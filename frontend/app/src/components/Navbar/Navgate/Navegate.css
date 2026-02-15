@@ -1,0 +1,8 @@
+.navegateContainer{
+    height: 100%;
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns:1fr 1fr;
+    grid-template-rows:auto; 
+    background-color: bisque;
+}
