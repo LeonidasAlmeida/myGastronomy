@@ -1,8 +1,89 @@
 .navegateContainer{
     height: 100%;
-    border: 1px solid black;
+   /* border: 1px solid black;*/
     display: grid;
-    grid-template-columns:1fr 1fr;
+    grid-template-columns:3fr 1fr;
     grid-template-rows:auto; 
+    grid-template-areas: "normalNavegate loginNavegate";
     background-color: bisque;
+}
+.normalNavegate{
+    grid-area: normalNavegate;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.normalNavegate ul {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.normalNavegate ul li{
+    /*border:1px solid black;*/
+    width: 130px;
+    height:40px;
+    margin:4px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.normalNavegate ul li a {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.normalNavegate ul li a:active{
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 123, 0);
+}
+
+
+/*---------------------------------------------------------------------------------*/
+.loginNavegate{
+         grid-area: loginNavegate;
+        background-color: rgb(255, 255, 255);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+}
+.loginNavegate {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.loginNavegate ul li {
+    /*border:1px solid black;*/
+    width: 130px;
+    height: 40px;
+    margin: 4px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.loginNavegate li a {
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.loginNavegate ul li a:active {
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 123, 0);
 }
